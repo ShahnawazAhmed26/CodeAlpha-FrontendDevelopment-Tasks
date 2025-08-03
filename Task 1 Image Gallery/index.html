@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1 class="gallery-title">My Image Gallery</h1>
+
+
+  <div class="gallery">
+    <div class="image-box nature"><img src="https://picsum.photos/id/1015/600/400" alt="Nature 1" onclick="openLightbox(0)"/></div>
+    <div class="image-box city"><img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" alt="LandScape" onclick="openLightbox(1)"/></div>
+    <div class="image-box animals"><img src="https://picsum.photos/id/1025/600/400" alt="Animal 1" onclick="openLightbox(2)"/></div>
+    <div class="image-box nature"><img src="https://picsum.photos/id/1003/600/400" alt="Nature 2" onclick="openLightbox(3)"/></div>
+    <div class="image-box city"><img src="https://picsum.photos/id/1012/600/400" alt="City 2" onclick="openLightbox(4)"/></div>
+    <div class="image-box animals"><img src="https://picsum.photos/id/1024/600/400" alt="Animal 2" onclick="openLightbox(5)"/></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Preview">
+    <div class="navigation">
+      <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094; Prev</button>
+      <button class="nav-btn next" onclick="changeSlide(1)">Next &#10095;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
